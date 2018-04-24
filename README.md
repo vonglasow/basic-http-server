@@ -2,6 +2,7 @@ A simple HTTP static file server written in Rust with async [hyper](https://hype
 
 [The source is simple, and commented for easy comprehension](src/main.rs).
 
+[![Build Status](https://travis-ci.org/vonglasow/basic-http-server.svg?branch=master)](https://travis-ci.org/vonglasow/basic-http-server)
 
 ```
 USAGE:
@@ -29,6 +30,12 @@ $ basic-http-server
 ```
 
 If you prefer to not use `cargo install`, clone the repo and then `cargo run --release -- $DIRECTORY`.
+
+## Use with docker
+
+```sh
+docker run -p "4000:4000" -v "$PWD/public:/public" vonglasow/rust-basic-http-server
+```
 
 ## License
 
